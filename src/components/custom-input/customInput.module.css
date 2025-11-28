@@ -1,0 +1,256 @@
+/* CustomInput.module.css */
+.blockInput {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Стили для label в зависимости от размера */
+.labelXs {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.labelSm {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.labelMd {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.labelLg {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.labelXl {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.label {
+  color: #1f2937;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.asterisk {
+  color: #dc2626;
+  margin-left: 2px;
+  font-weight: 600;
+}
+
+/* Стили для description в зависимости от размера */
+.descriptionXs {
+  font-size: 10px;
+}
+
+.descriptionSm {
+  font-size: 12px;
+}
+
+.descriptionMd {
+  font-size: 14px;
+}
+
+.descriptionLg {
+  font-size: 16px;
+}
+
+.descriptionXl {
+  font-size: 18px;
+}
+
+.description {
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Стили для error в зависимости от размера */
+.errorXs {
+  font-size: 10px;
+}
+
+.errorSm {
+  font-size: 12px;
+}
+
+.errorMd {
+  font-size: 14px;
+}
+
+.errorLg {
+  font-size: 16px;
+}
+
+.errorXl {
+  font-size: 18px;
+}
+
+.error {
+  color: #dc2626;
+  line-height: 1.4;
+}
+
+/* Базовые стили инпута */
+.input {
+  border: 1px solid;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f9fafb;
+}
+.inputWrapper{
+  position: relative;  
+
+}
+.leftSection {
+  position: absolute; 
+  left: 6px;
+  top: 8px;
+  color:#6b7280
+}
+.rightSection {
+  position: absolute; 
+  right: 6px;
+  top: 8px;
+  color:#6b7280
+}
+/* Размеры ИНПУТА */
+.inputXs {
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.inputSm {
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.inputMd {
+  padding: 10px 14px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.inputLg {
+  padding: 14px 18px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.inputXl {
+  padding: 18px 22px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Варианты скругления */
+.rounded-xs { border-radius: 2px; }
+.rounded-sm { border-radius: 4px; }
+.rounded-md { border-radius: 6px; }
+.rounded-lg { border-radius: 8px; }
+.rounded-xl { border-radius: 12px; }
+.rounded-full { border-radius: 9999px; }
+
+/* Варианты стилей */
+.default {
+  border-color: #d1d5db;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.default:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.filled {
+  border-color: transparent;
+  background-color: #f3f4f6;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.filled:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.unstyled {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.unstyled:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Состояние ошибки */
+.input.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.input.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.inputWithLeftIcon {
+  padding-left: 32px !important;
+}
+
+.inputWithRightIcon {
+  padding-right: 32px !important;
+}
+
+.inputWithBothIcons {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+/* Улучшенные стили для иконок */
+.leftSection, .rightSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+
+.leftSection {
+  left: 8px;
+}
+
+.rightSection {
+  right: 8px;
+}
