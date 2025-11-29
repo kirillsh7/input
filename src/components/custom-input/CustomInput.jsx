@@ -4,12 +4,13 @@ export const CustomInput = ({
 	variant = "filled",
 	size = 'sm',
 	radius = 'sm',
-	label = "Input label",
+	label = null,
 	withAsterisk = false,
-	description = "Input description",
+	description = null,
 	error = "",
 	leftSection,
 	rightSection,
+	
 	...props }) => {
 
 	const getInputPadding = () => {
