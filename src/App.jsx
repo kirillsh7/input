@@ -1,19 +1,28 @@
-
 import { useState } from 'react'
 import { SignIn } from './components/sign-in/SignIn'
 import { SignUp } from './components/sign-up/SignUp'
 import './App.css'
 
-function App() {  
-  const [data, setData] = useState({  })
-  const onChange = (e) => {
+function App() {
+  const [data, setData] = useState({
+    emailSignIn: '',
+    passwordSignIn: '',
+    firstName: '',
+    nickName: '',
+    emailSignUp: '',
+    gender: '',
+    passwordSignUp: '',
+    checkPassword: ''
+  })
+  const onChange = (event) => {
     setData({
       ...data,
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     })
   }
-  const onSubmit = (e,data) => {
-    e.preventDefault()
+
+  const onSubmit = (event, data) => {
+    event.preventDefault()
     console.log(data)
   }
 
@@ -26,9 +35,9 @@ function App() {
       gap: '20px'
 
     }}>
-      <SignIn onSubmit={onSubmit}/>
-      <SignUp onSubmit={onSubmit}/>
-     
+      <SignIn onSubmit={onSubmit} onChange={onChange} data={data} />
+      <SignUp onSubmit={onSubmit} onChange={onChange} data={data} />
+
     </div>
   </>
   )

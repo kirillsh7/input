@@ -1,20 +1,12 @@
-import { CustomInput } from '../custom-input/CustomInput'
-import { useState } from 'react'
+import { CustomInput } from '../common/custom-input/CustomInput'
 
-export const SignIn = ({ onSubmit }) => {
-	
-	const [data, setData] = useState({ email: '', password: '' })
-	const onChange = (e) => {
-		setData({
-			...data,
-			[e.target.name]: e.target.value
-		})
-	}
+
+export const SignIn = ({ onSubmit, onChange, data }) => {
 
 	return (
-		<form onSubmit={(e)=>onSubmit( e,data)}>
-			<CustomInput type="email" label={'Почта'} name="email" value={data.email} onChange={onChange}/>
-			<CustomInput type="password" label={'Пароль'} name="password" value={data.password} onChange={onChange}/>
+		<form onSubmit={(event) => onSubmit(event, data)}>
+			<CustomInput type="email" label={'Почта'} name="emailSignIn" value={data.emailSignIn} onChange={onChange} />
+			<CustomInput type="password" label={'Пароль'} name="passwordSignIn" value={data.passwordSignIn} onChange={onChange} />
 			<button>Sign In</button>
 		</form>
 	)

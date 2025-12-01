@@ -10,7 +10,6 @@ export const CustomInput = ({
 	error = "",
 	leftSection,
 	rightSection,
-	
 	...props }) => {
 
 	const getInputPadding = () => {
